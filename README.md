@@ -1,27 +1,23 @@
-# 🧭 Responsive Navbar
+# Responsive Navbar
 
-A CSS practice project — building a responsive navigation bar using Flexbox and media queries that adapts cleanly from desktop to mobile layouts.
+A CSS practice project: a navigation bar built with Flexbox and media queries that goes
+from a horizontal desktop layout to a stacked mobile one, with no framework involved.
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+The layout is the one most real sites use — logo on the left, links in the middle, action
+button on the right — which is what made it worth building rather than inventing something
+arbitrary.
 
----
+## What I took from it
 
-## 📚 What I Was Learning
+Before this I was mostly guessing at Flexbox properties and nudging values until things
+looked right. Building a navbar forced me to understand why each one does what it does.
+`justify-content: space-between` puts the logo on the left and the links on the right
+because it pushes children to opposite ends of the main axis — not because it's the
+property that happened to work.
 
-Flexbox layout and CSS media queries — the two core tools for building responsive navigation in modern CSS without a framework.
+Media queries taught me to think in breakpoints rather than in screen sizes. Once the
+viewport gets narrow enough that horizontal items stop fitting, collapsing them into a
+column is a few lines, and the interesting decision is picking where that point is.
 
----
-
-## 🔑 Key Things Practiced
-
-- **Flexbox** — `display: flex`, `justify-content`, `align-items`, `flex-wrap` for navbar layout
-- **Media Queries** — `@media` breakpoints to switch between horizontal and stacked layouts
-- **Responsive Design Principles** — Designing mobile-first and expanding to larger screens
-- **CSS Navigation Patterns** — Logo + nav links + action button layout common across real sites
-
----
-
-## 💡 What It Taught Me
-
-Before this exercise I was mostly guessing at Flexbox properties until things looked right. Building a navbar forced me to understand *why* each property works: `justify-content: space-between` places the logo on the left and links on the right because it pushes children to opposite ends of the main axis. Media queries taught me to think in breakpoints — once the viewport narrows, collapsing horizontal items into a stacked column is just a few lines. These two tools (Flexbox + media queries) cover the vast majority of real-world responsive layout needs.
+Between them, Flexbox and media queries cover most of what responsive layout actually
+requires.
